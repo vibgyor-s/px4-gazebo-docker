@@ -1,0 +1,11 @@
+services:
+
+  px4_gazebo:
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
