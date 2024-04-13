@@ -1,6 +1,7 @@
 # px4-gz-docker
 Docker files needed to build images for px4_sitl simulation in ROS2 and Gazebo
 
+## Create a ./work directory in root of cloned repo
 The `./work` directory setup 
 
 run `./get_src.sh` to clone each repo
