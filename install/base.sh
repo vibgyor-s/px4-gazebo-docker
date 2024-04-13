@@ -17,4 +17,5 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
 	python3-venv \
 	python3-wheel \
 	unzip \
-	wget
+	wget \
+	gnupg2

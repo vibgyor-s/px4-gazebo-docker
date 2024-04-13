@@ -1,5 +1,5 @@
 FROM ubuntu:22.04
-LABEL maintainer="Li-Yu Lin <liyu8561501@gmail.com>"
+LABEL maintainer="Vibgyor Singhvi <vibgyorasset.singhvi7@gmail.com>"
 
 # environment
 ENV PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
@@ -57,11 +57,11 @@ RUN bash /tmp/install/gazebo.sh && /docker_clean.sh
 # add groups before we do anything that might add a new group
 ARG GID_INPUT=107
 ARG GID_RENDER=110
-# RUN sudo groupadd -r -g $GID_INPUT input && \
-#  sudo groupadd -r -g $GID_RENDER render
+RUN sudo groupadd -r -g $GID_INPUT input && \
+ sudo groupadd -r -g $GID_RENDER render
 
-COPY install/latex.sh /tmp/install/latex.sh
-RUN bash /tmp/install/latex.sh && /docker_clean.sh
+#COPY install/latex.sh /tmp/install/latex.sh
+#RUN bash /tmp/install/latex.sh && /docker_clean.sh
 
 COPY install/extra.sh /tmp/install/extra.sh
 RUN bash /tmp/install/extra.sh && /docker_clean.sh
@@ -90,6 +90,7 @@ RUN mkdir -p /home/user/.gz && \
 VOLUME /home/user/work
 WORKDIR /home/user/work
 RUN mkdir -p /home/user/work
+COPY get_src.sh /home/user/get_src.sh
 
 COPY install/px4_setup.sh /home/user/px4_setup.sh
 RUN bash /home/user/px4_setup.sh && rm /home/user/px4_setup.sh
