@@ -35,7 +35,8 @@ To run multiple drones
 
 To access the shell of each service, in two different terminals run
 
-Terminal 1: `docker exec -u user -it px4-gazebo-docker-px4_gazebo-1 terminator`
+////Terminal 1: `docker exec -u user -it px4-gazebo-docker-px4_gazebo-1 terminator`
+Terminal 1: `docker exec -u user -it {(NAME_OF_CONTAINER)} bash`
 
 To start px4_sitl and ros2 offboard control, split each terminator into 3 panels and run
 
