@@ -23,6 +23,12 @@ To build the image
 
 `docker compose build`
 
+OR
+
+Same image can be pulled prebuilt by 
+
+`docker pull pixelinkler/px4-gazebo-docker:latest`
+
 To run multiple drones
 
 `./run_dev.sh`
