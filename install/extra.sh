@@ -30,3 +30,4 @@ sudo pip install pykwalify
 sudo wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
 #chmod +x install_geographiclib_datasets.sh
 sudo bash install_geographiclib_datasets.sh && sudo rm install_geographiclib_datasets.sh
+sudo pip install mavsdk
