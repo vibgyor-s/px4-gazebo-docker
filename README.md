@@ -15,6 +15,7 @@ work/
 ┃   ┗ ros_gz/
 ┗ .gitignore
 ```
+AVOID:HUGE OVERLOAD, binaries already installed in ENV: 
 Please build ros_gz from source. [see ros-gz](https://github.com/gazebosim/ros_gz)
 
 
