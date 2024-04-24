@@ -29,8 +29,9 @@ services:
     stdin_open: true
     privileged: true
     hostname: px4_gazebo
-    sysctls:
-      - net.ipv6.conf.all.disable_ipv6=0
+    network_mode: "host"
+#    sysctls:
+#      - net.ipv6.conf.all.disable_ipv6=0
     volumes:
       - ./work:/home/user/work
       - /tmp/.X11-unix:/tmp/.X11-unix
