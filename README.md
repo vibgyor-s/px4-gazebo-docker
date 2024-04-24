@@ -12,12 +12,14 @@ work/
 ┃ ┗ src/
 ┃   ┣ px4_msgs/
 ┃   ┣ px4-offboard/
-┃   ┗ ros_gz/
 ┗ .gitignore
 ```
 AVOID:HUGE OVERLOAD, binaries already installed in ENV: 
 Please build ros_gz from source. [see ros-gz](https://github.com/gazebosim/ros_gz)
 
+
+Currently, docker uses same network interface as the host (Configure in compose file)
+QGC running in host environment will directly connect to PX4 SITL
 
 ### Build and run
 To build the image
