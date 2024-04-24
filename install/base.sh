@@ -18,4 +18,5 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
 	python3-wheel \
 	unzip \
 	wget \
-	gnupg2
+	gnupg2 \
+ 	nano
