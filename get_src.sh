@@ -14,3 +14,7 @@ if [ ! -d ./work/ros2_ws/src ] ; then
     git clone https://github.com/Jaeyoung-Lim/px4-offboard.git
 fi
 
+if [ ! -d ./work/MAVSDK-Python ] ; then
+    cd work/
+    git clone https://github.com/mavlink/MAVSDK-Python.git
+fi
