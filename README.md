@@ -57,3 +57,25 @@ comment(
 - `PX4_MICRODDS_NS` Namespace assigned to the sitl vehicle, normally associated with px4 instances, but can be set mannually
 - `ROS_DOMAIN_ID` Separate each container into its own domain (Is it still necessary since each SITL instance has a unique namespace?)
 )
+
+## In case anyone tries to get docker to work with QGC (in host), here is what worked for me. 
+
+    get the the docker host ip using
+
+DOCKER_IP=$(docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $CONTAINER_NAME)
+
+    Modify the QGC (in host) config file under
+
+.config/QGroundControl.org/QGroundControl.ini
+
+    Add the following
+
+[LinkConfigurations]
+Link0\auto=true
+Link0\high_latency=false
+Link0\host0=$DOCKER_IP
+Link0\hostCount=4
+Link0\name=gazebo
+Link0\port=14580
+Link0\port0=14580
+Link0\type=1
