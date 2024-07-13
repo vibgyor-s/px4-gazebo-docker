@@ -70,12 +70,12 @@ DOCKER_IP=$(docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{
 
     Add the following
 
-[LinkConfigurations]
-Link0\auto=true
-Link0\high_latency=false
-Link0\host0=$DOCKER_IP
-Link0\hostCount=4
-Link0\name=gazebo
-Link0\port=14580
-Link0\port0=14580
-Link0\type=1
+[LinkConfigurations]  
+Link0\auto=true  
+Link0\high_latency=false  
+Link0\host0=$DOCKER_IP  
+Link0\hostCount=4  
+Link0\name=gazebo  
+Link0\port=14580  
+Link0\port0=14580  
+Link0\type=1  
